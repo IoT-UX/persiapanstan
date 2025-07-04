@@ -1,0 +1,110 @@
+:root {
+    --primary-blue: #0A4D99;
+    --accent-gold: #D4AF37;
+    --background-light: #f4f7fc;
+    --text-dark: #333333;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --danger-color: #dc3545;
+    --danger-bg: #f8d7da;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(10, 77, 153, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+main section {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* Gaya Punishment */
+#punishment-section { background-color: var(--danger-bg); border: 2px solid var(--danger-color); }
+#punishment-section h2 { color: var(--danger-color); border-bottom-color: var(--danger-color); }
+.punishment-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #f1b0b7; }
+.punishment-item:last-child { border-bottom: none; }
+.punishment-text strong { color: var(--danger-color); }
+.dismiss-punishment-btn { padding: 5px 10px; background-color: var(--danger-color); color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+/* Gaya Dashboard */
+.target-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.target-item { padding: 15px; border: 1px solid var(--border-color); border-radius: 8px; }
+.target-item .label { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 8px; }
+.progress-bar { width: 100%; height: 20px; background-color: #e9ecef; border-radius: 10px; overflow: hidden; }
+.progress-bar-inner { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent-gold), var(--primary-blue)); transition: width 0.5s ease-in-out; border-radius: 10px; }
+
+/* Gaya Quick Add */
+.quick-add-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+.quick-btn { flex-grow: 1; padding: 12px 15px; font-size: 0.9rem; font-weight: 600; cursor: pointer; border: 2px solid; border-radius: 8px; transition: all 0.2s ease; }
+.quick-btn.academic { border-color: var(--accent-gold); color: var(--accent-gold); background-color: white; }
+.quick-btn.academic:hover { background-color: var(--accent-gold); color: white; }
+.quick-btn.physical { border-color: var(--primary-blue); color: var(--primary-blue); background-color: white; }
+.quick-btn.physical:hover { background-color: var(--primary-blue); color: white; }
+
+/* Gaya Riwayat */
+.history-log { max-height: 400px; overflow-y: auto; }
+table { width: 100%; border-collapse: collapse; }
+table th, table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color); }
+table th { background-color: #f8f9fa; }
+.delete-btn { background: none; border: none; cursor: pointer; font-size: 1.2rem; color: var(--danger-color); }
+
+/* Gaya Catatan Penting */
+#notes-section ul { padding-left: 20px; }
+#notes-section li { margin-bottom: 10px; }
+
+/* Gaya Accordion untuk Tips & Trik */
+.accordion-item { border-bottom: 1px solid var(--border-color); }
+.accordion-header { background-color: transparent; border: none; width: 100%; text-align: left; padding: 18px; font-size: 1.1rem; font-weight: 600; color: var(--primary-blue); cursor: pointer; outline: none; transition: background-color 0.2s; position: relative; }
+.accordion-header::after { content: '+'; font-size: 1.5rem; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); transition: transform 0.3s; }
+.accordion-header.active::after { transform: translateY(-50%) rotate(45deg); }
+.accordion-header:hover { background-color: #f8f9fa; }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 18px; }
+.accordion-content p { margin: 15px 0; }
+
+/* Gaya Footer */
+footer { text-align: center; margin-top: 40px; padding: 20px; color: #777; font-size: 0.9rem; }

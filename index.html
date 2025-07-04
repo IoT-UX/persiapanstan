@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persiapan STAN Based on Gemini 2.5</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard Persiapan STAN</h1>
+            <p id="motivational-quote">Memuat kutipan motivasi...</p>
+        </header>
+
+        <main>
+            <section id="punishment-section" class="hide"></section>
+            
+            <section id="target-dashboard">
+                <h2 id="dashboard-title">Progres Target Mingguan</h2>
+                <div id="target-container" class="target-container"></div>
+            </section>
+
+            <section id="quick-add-section">
+                <h2>🚀 Quick Add: Catat Sesi Latihan</h2>
+                <div class="quick-add-buttons">
+                    <button class="quick-btn academic" data-activity="TIU">📚 TIU</button>
+                    <button class="quick-btn academic" data-activity="TWK">📚 TWK</button>
+                    <button class="quick-btn academic" data-activity="TKP">📚 TKP</button>
+                    <button class="quick-btn academic" data-activity="TPA/TPS">📚 TPA/TPS</button>
+                    <button class="quick-btn academic" data-activity="Bahasa Inggris">📚 Bahasa Inggris</button>
+                    <button class="quick-btn physical" data-activity="Lari">🏃 Lari</button>
+                    <button class="quick-btn physical" data-activity="Push Up">💪 Push Up</button>
+                    <button class="quick-btn physical" data-activity="Sit Up">💪 Sit Up</button>
+                    <button class="quick-btn physical" data-activity="Shuttle Run">💨 Shuttle Run</button>
+                    <button class="quick-btn physical" data-activity="Pull Up/Chinning">🏋️ Pull Up/Chinning</button>
+                </div>
+            </section>
+            
+            <section id="history-section">
+                <h2>📜 Riwayat Latihan</h2>
+                <div class="history-log">
+                    <table>
+                        <thead><tr><th>Tanggal</th><th>Aktivitas</th><th>Detail</th><th>Aksi</th></tr></thead>
+                        <tbody id="history-table-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="notes-section">
+                <h2>❗ Catatan Penting & Peringatan Kritis</h2>
+                <ul>
+                    <li><strong>Administrasi & Dokumen:</strong> Pastikan data pada KTP, Kartu Keluarga, dan Ijazah/SKL **100% identik**. Perbedaan satu huruf pun bisa berisiko. Gunakan email dan nomor HP yang aktif dan pribadi. Simpan semua bukti pendaftaran.</li>
+                    <li><strong>Kesehatan Mata:</strong> tidak ada Batasan terkait toleransi mata minus/plus/silinder (umumnya tidak lebih dari 2 dioptri).. Lakukan pemeriksaan di dokter spesialis mata, bukan hanya di optik.</li>
+                    <li><strong>Kesehatan Gigi & THT:</strong> Gigi tidak boleh berlubang (wajib ditambal), karang gigi harus bersih, dan tidak ada masalah gusi serius. Pastikan juga telinga bersih dan pendengaran normal.</li>
+                    <li><strong>Fisik & Postur:</strong> Selain bebas tato/tindik, pastikan Anda tidak memiliki kondisi seperti varises, ambeien, skoliosis, atau kaki X/O yang parah, karena bisa mengurangi penilaian atau menggugurkan.</li>
+                    <li><strong>Integritas & Kejujuran:</strong> Jangan pernah mencoba memalsukan dokumen atau berbuat curang. Sistem seleksi sangat ketat dan riwayat Anda akan dicek.</li>
+                    
+                    <li><strong>Penempatan Nasional:</strong> Lulusan PKN STAN wajib bersedia ditempatkan di seluruh unit Kementerian Keuangan di seluruh wilayah Indonesia. Pikirkan kesiapan ini sejak awal.</li>
+                <li><strong>DISCLAIMER : TIAP TAHUNNYA BISA BERUBAH</strong></li>
+                </ul>
+            </section>
+
+            <section id="tips-section">
+                <h2>💡 Tips & Trik Strategis</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Strategi SKD: TIU, TWK, TKP</button>
+                        <div class="accordion-content">
+                            <p><strong>TIU (Intelegensi Umum):</strong> Latih kecepatan berhitung dasar tanpa kalkulator. Untuk soal penalaran logis (silogisme), gunakan metode coret atau diagram Venn untuk menghindari jebakan. Jangan gunakan asumsi dunia nyata, patuhi premis yang diberikan soal.</p>
+                            <p><strong>TWK (Wawasan Kebangsaan):</strong> Fokus pada **penalaran**, bukan sekadar hafalan. Pelajari keterkaitan antar pasal dalam UUD 1945. Pahami implementasi nilai-nilai Pancasila dalam konteks kebijakan pemerintah dan isu-isu terkini (misalnya, tentang radikalisme dan bela negara).</p>
+                            <p><strong>TKP (Karakteristik Pribadi):</strong> Kuncinya adalah memilih jawaban yang mencerminkan pribadi yang **proaktif, bertanggung jawab, mengutamakan kepentingan publik, dan mampu bekerja sama**. Hindari jawaban yang pasif, menyalahkan orang lain, atau individualistis. Ingat, setiap jawaban memiliki skor (1-5).</p>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <button class="accordion-header">Strategi TPA/TPS & Bahasa Inggris</button>
+                        <div class="accordion-content">
+                             <p><strong>TPA/TPS (Potensi Akademik/Skolastik):</strong> Ini sangat mirip dengan TIU namun bisa lebih mendalam pada penalaran verbal dan kuantitatif. Latih kemampuan membaca cepat untuk soal pemahaman bacaan. Identifikasi kata kunci pada soal untuk menghemat waktu.</p>
+                             <p><strong>Bahasa Inggris:</strong> Untuk *Structure and Written Expression*, identifikasi Subjek-Verb dalam kalimat. Waspadai jebakan seperti *prepositional phrase* yang memisahkan subjek dan verb. Untuk *Reading*, baca pertanyaan terlebih dahulu, lalu cari jawabannya di teks menggunakan teknik *skimming* dan *scanning*.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Strategi Latihan Fisik)</button>
+                        <div class="accordion-content">
+                            <p><strong>Lari 12 Menit:</strong> Latih *pace* (kecepatan lari) yang konsisten. Gunakan aplikasi lari (seperti Strava/Nike Run Club) untuk melacak kemajuan. Lakukan lari interval (sprint-jogging) 2 kali seminggu untuk meningkatkan kapasitas paru-paru (VO2 Max).</p>
+                            <p><strong>Push Up & Sit Up:</strong> **Form over speed!** Pastikan gerakan Anda sempurna sesuai standar (dada menyentuh lantai untuk push up, punggung lurus untuk sit up). Gerakan yang tidak sempurna tidak akan dihitung dan hanya membuang tenaga.</p>
+                             <p><strong>Shuttle Run (Lari Angka 8):</strong> Kunci utamanya ada pada **putaran**. Berlatihlah memutar badan dengan cepat dan rendah (agak jongkok) agar tidak kehilangan momentum. Gunakan sepatu dengan cengkeraman yang baik.</p>
+                             <p><strong>Pull Up/Chinning:</strong> Ini adalah tes kekuatan murni. Jika belum bisa, latih otot punggung dan bisep dengan *negative pull-ups* (lompat ke atas, lalu turun perlahan) dan *Australian pull-ups* (badan lurus horizontal, tarik dada ke tiang).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; Dibuat 100% berdasarkan Gemini 2.5 jika ada kesalahan segera laporkan promting yaitu Rasya. Dibuat dengan semangat untuk membantu para pejuang STAN.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
